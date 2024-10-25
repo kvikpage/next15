@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    SERVER_WEBSITE_NAME: "Server",
+    NEXT_PUBLIC_WEBSITE_NAME: "Toc", //process.env.NEXT_PUBLIC_WEBSITE_NAME,
+  },
 };
 
 export default nextConfig;
