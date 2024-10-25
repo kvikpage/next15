@@ -24,14 +24,11 @@ RUN pnpm run build
 FROM base AS production
 WORKDIR /app
 ENV NODE_ENV=production
-COPY ./init.js ./init.js
 COPY --from=build /app/public ./public
 COPY --from=build /app/.next/standalone ./
 COPY --from=build /app/.next/static ./.next/static
 
-# Pass the build argument to the runtime environment
-ARG WEBSITE_NAME
-ENV WEBSITE_NAME=$WEBSITE_NAME
+
 
 EXPOSE 3000
 CMD ["node", "server.js"]
