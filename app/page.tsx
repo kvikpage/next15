@@ -1,4 +1,5 @@
 export default async function Home() {
+  console.log(process.env);
   return (
     <main className="py-20 px-[5%]">
       <div className="container mx-auto">
