@@ -1,5 +1,4 @@
 export default async function Home() {
-  console.log(process.env);
   return (
     <main className="py-20 px-[5%]">
       <div className="container mx-auto">
@@ -10,6 +9,9 @@ export default async function Home() {
           Client code: {process.env.NEXT_PUBLIC_WEBSITE_NAME}
         </h3>
         <p className="text-lg">This is a test</p>
+      </div>
+      <div className="prose">
+        <pre>{JSON.stringify(process.env, null, 2)}</pre>
       </div>
     </main>
   );
