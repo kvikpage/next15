@@ -9,6 +9,7 @@ env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
   DOCKER_REPOSITORY: ${{ github.repository }}
+  WEBSITE_NAME: ${{ secrets.WEBSITE_NAME }}
 
 jobs:
   build-and-push:
