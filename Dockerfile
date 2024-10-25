@@ -15,8 +15,7 @@ COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 
 # Add build argument for WEBSITE_NAME
-ARG WEBSITE_NAME
-ENV WEBSITE_NAME=$WEBSITE_NAME
+ARG WEBSITE_NAME=${WEBSITE_NAME}
 
 RUN pnpm run build
 
